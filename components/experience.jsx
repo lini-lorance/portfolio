@@ -1,57 +1,43 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { motion } from "framer-motion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 export default function Experience() {
   const experiences = [
     {
-      company: "TechInnovate Solutions",
-      position: "Senior Full-Stack Developer",
-      period: "Jan 2022 - Present",
-      description: "Leading development of enterprise SaaS platforms for financial services clients.",
-      technologies: ["React", "Next.js", "Node.js", "JavaScript", "PostgreSQL", "AWS"],
-      responsibilities: [
-        "Architected and implemented scalable microservices architecture",
-        "Led a team of 5 developers using Agile methodologies",
-        "Optimized application performance, reducing load times by 40%",
-        "Implemented CI/CD pipelines with GitHub Actions and AWS",
-        "Collaborated with UX designers to create intuitive user interfaces",
+      company: "Coding Hands Infotech LLP",
+      position: "Software Developer",
+      period: "Dec 2021 - Present",
+      description:
+        "Was part of the team that developed the admin panel and smart recipe system for Banjos Bakery’s e-commerce platform, used across 56+ franchises for operations, inventory, and precise recipe management.",
+      technologies: [
+        "React.js",
+        "Next.js",
+        "JavaScript",
+        "Material UI",
+        "Tailwind CSS",
+        "Shade UI",
+        "GitHub",
+        "Azure",
+        "Firebase",
       ],
-    },
-    {
-      company: "DataFlow Systems",
-      position: "Full-Stack Developer",
-      period: "Mar 2020 - Dec 2021",
-      description: "Developed data visualization and analytics platforms for business intelligence.",
-      technologies: ["React", "Express.js", "MongoDB", "D3.js", "GraphQL", "Docker"],
       responsibilities: [
-        "Built responsive dashboards with real-time data visualization",
-        "Developed RESTful and GraphQL APIs for data retrieval and manipulation",
-        "Implemented authentication and authorization systems",
-        "Optimized database queries for large datasets",
+        "Developed a dynamic recipe management application enabling users to create, modify, and scale complex recipes with real-time ingredient adjustments",
+        "Developed and maintained a scalable admin panel for a popular Australian bakery chain used across 56 franchise locations to manage orders, inventory, menus, and user roles",
+        "Built dynamic dashboards and data-driven interfaces to streamline day-to-day operations for franchise managers and staff",
+        "Developed and maintained scalable and efficient backend systems",
         "Participated in code reviews and mentored junior developers",
       ],
     },
-    {
-      company: "WebSphere Innovations",
-      position: "Frontend Developer",
-      period: "Jun 2018 - Feb 2020",
-      description: "Created interactive web applications for e-commerce and media clients.",
-      technologies: ["React", "Redux", "JavaScript", "SASS", "Webpack", "Jest"],
-      responsibilities: [
-        "Developed responsive and accessible user interfaces",
-        "Implemented state management with Redux and Context API",
-        "Created reusable component libraries",
-        "Wrote unit and integration tests with Jest and React Testing Library",
-        "Collaborated with backend developers to integrate APIs",
-      ],
-    },
-  ]
+  ];
 
   return (
-    <section id="experience" className="py-20 px-4 md:px-6 lg:px-8 bg-muted/50 scroll-mt-16">
+    <section
+      id="experience"
+      className="py-20 px-4 md:px-6 lg:px-8 bg-muted/50 scroll-mt-16"
+    >
       <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -60,7 +46,9 @@ export default function Experience() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Work Experience</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Work Experience
+          </h2>
           <div className="h-1 w-20 bg-primary mx-auto"></div>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
             My professional journey building real-world applications
@@ -84,16 +72,24 @@ export default function Experience() {
                       {exp.period}
                     </Badge>
                   </div>
-                  <div className="text-lg font-medium text-primary">{exp.company}</div>
+                  <div className="text-lg font-medium text-primary">
+                    {exp.company}
+                  </div>
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4">{exp.description}</p>
 
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold mb-2">Technologies:</h4>
+                    <h4 className="text-sm font-semibold mb-2">
+                      Technologies:
+                    </h4>
                     <div className="flex flex-wrap gap-2">
                       {exp.technologies.map((tech) => (
-                        <Badge key={tech} variant="secondary" className="text-xs">
+                        <Badge
+                          key={tech}
+                          variant="secondary"
+                          className="text-xs"
+                        >
                           {tech}
                         </Badge>
                       ))}
@@ -101,7 +97,9 @@ export default function Experience() {
                   </div>
 
                   <div>
-                    <h4 className="text-sm font-semibold mb-2">Key Responsibilities:</h4>
+                    <h4 className="text-sm font-semibold mb-2">
+                      Key Responsibilities:
+                    </h4>
                     <ul className="list-disc pl-5 space-y-1">
                       {exp.responsibilities.map((resp, i) => (
                         <li key={i} className="text-sm">
@@ -117,5 +115,5 @@ export default function Experience() {
         </div>
       </div>
     </section>
-  )
+  );
 }
